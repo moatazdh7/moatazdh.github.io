@@ -1,10 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Moataz AlDhahri</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class'
+    }
+  </script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <style>
     #backToTop {
@@ -26,23 +31,30 @@
     }
   </style>
 </head>
-<body class="bg-gray-50 text-gray-800 font-sans">
+<body class="bg-gray-50 dark:bg-gray-900 dark:text-gray-100 text-gray-800 font-sans transition-colors duration-300">
+
+  <!-- Dark Mode Toggle Button -->
+  <div class="fixed top-4 right-4 z-50">
+    <button onclick="document.documentElement.classList.toggle('dark')" class="bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-white px-4 py-2 rounded-full shadow hover:shadow-lg transition">
+      Toggle Dark Mode
+    </button>
+  </div>
 
   <!-- Hero Section -->
-  <section id="top" class="min-h-screen flex flex-col justify-center items-center text-center bg-white px-4">
-    <h1 class="text-4xl md:text-6xl font-bold mb-4">Hi, I'm <span class="text-blue-600">Moataz</span></h1>
+  <section id="top" class="min-h-screen flex flex-col justify-center items-center text-center bg-white dark:bg-gray-800 px-4">
+    <h1 class="text-4xl md:text-6xl font-bold mb-4">Hi, I'm <span class="text-blue-600 dark:text-blue-400">Moataz</span></h1>
     <p class="text-lg md:text-2xl mb-6">Network & Security Specialist | Aspiring GRC Leader</p>
     <div class="flex space-x-4">
       <a href="#about" class="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition">About Me</a>
-      <a href="#projects" class="border border-blue-600 text-blue-600 px-6 py-2 rounded-full hover:bg-blue-100 transition">My Work</a>
+      <a href="#projects" class="border border-blue-600 text-blue-600 px-6 py-2 rounded-full hover:bg-blue-100 dark:hover:bg-blue-900 transition">My Work</a>
     </div>
   </section>
 
   <!-- About -->
-  <section id="about" class="py-20 bg-gray-100 px-6">
+  <section id="about" class="py-20 bg-gray-100 dark:bg-gray-700 px-6">
     <div class="max-w-4xl mx-auto text-center">
       <h2 class="text-3xl font-bold mb-6">About Me</h2>
-      <p class="text-lg leading-relaxed text-gray-700">
+      <p class="text-lg leading-relaxed text-gray-700 dark:text-gray-200">
         I’m a telecommunications engineer with over 18 years of experience in networks, programming, and cybersecurity.
         I specialize in building secure infrastructures and now expanding my career into Governance, Risk & Compliance (GRC).
       </p>
@@ -50,28 +62,28 @@
   </section>
 
   <!-- Projects -->
-  <section id="projects" class="py-20 bg-white px-6">
+  <section id="projects" class="py-20 bg-white dark:bg-gray-900 px-6">
     <div class="max-w-6xl mx-auto">
       <h2 class="text-3xl font-bold text-center mb-12">Projects</h2>
       <div class="grid md:grid-cols-3 gap-8">
-        <div class="bg-gray-100 rounded-xl shadow p-6 hover:shadow-lg transition">
+        <div class="bg-gray-100 dark:bg-gray-800 rounded-xl shadow p-6 transform transition duration-300 hover:scale-105 hover:rotate-1 hover:shadow-xl">
           <h3 class="text-xl font-semibold mb-2">Firewall Audit Tool</h3>
-          <p class="text-gray-600">Automated tool to check and report firewall rule compliance.</p>
+          <p class="text-gray-600 dark:text-gray-300">Automated tool to check and report firewall rule compliance.</p>
         </div>
-        <div class="bg-gray-100 rounded-xl shadow p-6 hover:shadow-lg transition">
+        <div class="bg-gray-100 dark:bg-gray-800 rounded-xl shadow p-6 transform transition duration-300 hover:scale-105 hover:-rotate-1 hover:shadow-xl">
           <h3 class="text-xl font-semibold mb-2">SharePoint Access Exporter</h3>
-          <p class="text-gray-600">Export detailed user access reports from SharePoint 2019.</p>
+          <p class="text-gray-600 dark:text-gray-300">Export detailed user access reports from SharePoint 2019.</p>
         </div>
-        <div class="bg-gray-100 rounded-xl shadow p-6 hover:shadow-lg transition">
+        <div class="bg-gray-100 dark:bg-gray-800 rounded-xl shadow p-6 transform transition duration-300 hover:scale-105 hover:rotate-1 hover:shadow-xl">
           <h3 class="text-xl font-semibold mb-2">GRC Dashboard (Concept)</h3>
-          <p class="text-gray-600">Visualize risk assessments and compliance stats in real-time.</p>
+          <p class="text-gray-600 dark:text-gray-300">Visualize risk assessments and compliance stats in real-time.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Resources Section -->
-  <section id="resources" class="py-20 bg-gray-100 px-6">
+  <section id="resources" class="py-20 bg-gray-100 dark:bg-gray-800 px-6">
     <div class="max-w-6xl mx-auto">
       <h2 class="text-3xl font-bold text-center mb-12">Tools & Resources</h2>
       <div class="grid md:grid-cols-3 gap-8">
@@ -79,30 +91,30 @@
         <!-- Security Tools -->
         <div>
           <h3 class="text-xl font-semibold mb-4">🔐 Security Tools</h3>
-          <ul class="space-y-2 text-blue-600">
-            <li><a href="#" class="hover:underline">Nmap Cheat Sheet</a></li>
-            <li><a href="#" class="hover:underline">Wireshark Filters</a></li>
-            <li><a href="#" class="hover:underline">Metasploit Basics</a></li>
+          <ul class="space-y-2">
+            <li><a href="#" class="block bg-white dark:bg-gray-700 border border-blue-600 text-blue-600 dark:text-blue-400 rounded-lg px-4 py-2 hover:bg-blue-600 hover:text-white dark:hover:text-white transition duration-200">Nmap Cheat Sheet</a></li>
+            <li><a href="#" class="block bg-white dark:bg-gray-700 border border-blue-600 text-blue-600 dark:text-blue-400 rounded-lg px-4 py-2 hover:bg-blue-600 hover:text-white dark:hover:text-white transition duration-200">Wireshark Filters</a></li>
+            <li><a href="#" class="block bg-white dark:bg-gray-700 border border-blue-600 text-blue-600 dark:text-blue-400 rounded-lg px-4 py-2 hover:bg-blue-600 hover:text-white dark:hover:text-white transition duration-200">Metasploit Basics</a></li>
           </ul>
         </div>
 
         <!-- GRC Templates -->
         <div>
           <h3 class="text-xl font-semibold mb-4">📊 GRC Templates</h3>
-          <ul class="space-y-2 text-blue-600">
-            <li><a href="#" class="hover:underline">Risk Register Excel</a></li>
-            <li><a href="#" class="hover:underline">Compliance Checklist (ISO)</a></li>
-            <li><a href="#" class="hover:underline">Audit Log Template</a></li>
+          <ul class="space-y-2">
+            <li><a href="#" class="block bg-white dark:bg-gray-700 border border-blue-600 text-blue-600 dark:text-blue-400 rounded-lg px-4 py-2 hover:bg-blue-600 hover:text-white dark:hover:text-white transition duration-200">Risk Register Excel</a></li>
+            <li><a href="#" class="block bg-white dark:bg-gray-700 border border-blue-600 text-blue-600 dark:text-blue-400 rounded-lg px-4 py-2 hover:bg-blue-600 hover:text-white dark:hover:text-white transition duration-200">Compliance Checklist (ISO)</a></li>
+            <li><a href="#" class="block bg-white dark:bg-gray-700 border border-blue-600 text-blue-600 dark:text-blue-400 rounded-lg px-4 py-2 hover:bg-blue-600 hover:text-white dark:hover:text-white transition duration-200">Audit Log Template</a></li>
           </ul>
         </div>
 
         <!-- Learning Resources -->
         <div>
           <h3 class="text-xl font-semibold mb-4">📚 Learning Resources</h3>
-          <ul class="space-y-2 text-blue-600">
-            <li><a href="#" class="hover:underline">GRC Fundamentals PDF</a></li>
-            <li><a href="#" class="hover:underline">Free Udemy Courses</a></li>
-            <li><a href="#" class="hover:underline">CISA Study Notes</a></li>
+          <ul class="space-y-2">
+            <li><a href="#" class="block bg-white dark:bg-gray-700 border border-blue-600 text-blue-600 dark:text-blue-400 rounded-lg px-4 py-2 hover:bg-blue-600 hover:text-white dark:hover:text-white transition duration-200">GRC Fundamentals PDF</a></li>
+            <li><a href="#" class="block bg-white dark:bg-gray-700 border border-blue-600 text-blue-600 dark:text-blue-400 rounded-lg px-4 py-2 hover:bg-blue-600 hover:text-white dark:hover:text-white transition duration-200">Free Udemy Courses</a></li>
+            <li><a href="#" class="block bg-white dark:bg-gray-700 border border-blue-600 text-blue-600 dark:text-blue-400 rounded-lg px-4 py-2 hover:bg-blue-600 hover:text-white dark:hover:text-white transition duration-200">CISA Study Notes</a></li>
           </ul>
         </div>
       </div>
@@ -110,22 +122,22 @@
   </section>
 
   <!-- Contact -->
-  <section id="contact" class="py-20 bg-white px-6">
+  <section id="contact" class="py-20 bg-white dark:bg-gray-900 px-6">
     <div class="max-w-3xl mx-auto text-center">
       <h2 class="text-3xl font-bold mb-6">Get In Touch</h2>
       <p class="mb-4 text-lg">Feel free to reach out for collaboration, consulting, or just a friendly hello 👋</p>
-      <a href="mailto:moatazflix1980@gmail.com" class="text-blue-600 underline text-lg">moatazflix1980@gmail.com</a>
+      <a href="mailto:moatazflix1980@gmail.com" class="text-blue-600 dark:text-blue-400 underline text-lg">moatazflix1980@gmail.com</a>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="bg-gray-100 py-8 border-t text-center">
+  <footer class="bg-gray-100 dark:bg-gray-800 py-8 border-t text-center">
     <div class="mb-4">
-      <a href="#" class="mx-2 text-gray-600 hover:text-blue-600 text-2xl"><i class="fab fa-linkedin"></i></a>
-      <a href="#" class="mx-2 text-gray-600 hover:text-blue-600 text-2xl"><i class="fab fa-github"></i></a>
-      <a href="#" class="mx-2 text-gray-600 hover:text-blue-600 text-2xl"><i class="fab fa-twitter"></i></a>
+      <a href="#" class="mx-2 text-gray-600 dark:text-gray-300 hover:text-blue-600 text-2xl"><i class="fab fa-linkedin"></i></a>
+      <a href="#" class="mx-2 text-gray-600 dark:text-gray-300 hover:text-blue-600 text-2xl"><i class="fab fa-github"></i></a>
+      <a href="#" class="mx-2 text-gray-600 dark:text-gray-300 hover:text-blue-600 text-2xl"><i class="fab fa-twitter"></i></a>
     </div>
-    <p class="text-sm text-gray-500">&copy; 2025 Moataz. All rights reserved.</p>
+    <p class="text-sm text-gray-500 dark:text-gray-400">&copy; 2025 Moataz. All rights reserved.</p>
   </footer>
 
   <!-- Back to Top Button -->
