@@ -1,73 +1,68 @@
-
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>معتز | البورتفوليو</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Moataz | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <header>
-        <h1>معتز الظاهري</h1>
-        <p>مهندس اتصالات وشبكات | مبرمج | باحث</p>
-        <a href="resume.pdf" class="btn" download>تحميل السيرة الذاتية</a>
-    </header>
+  <header>
+    <nav>
+      <h1>Moataz</h1>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="hero">
+      <h2>Hello, I'm Moataz 👋</h2>
+      <p>Network & Security Engineer | AI Enthusiast | GRC Specialist</p>
+      <div class="socials">
+        <a href="https://github.com/">GitHub</a>
+        <a href="https://linkedin.com/">LinkedIn</a>
+        <a href="mailto:moatazflix1980@gmail.com">Email</a>
+      </div>
+    </div>
+  </header>
 
-    <nav style='text-align:center;margin:10px;'><a href='index-en.html'>English</a></nav>
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I’m a seasoned engineer with over 18 years of experience in networks, programming, and GRC. I love building smart solutions and mentoring others.</p>
+  </section>
 
-    <section class="about">
-        <h2>من أنا؟</h2>
-        <p>مهندس بخبرة تتجاوز 18 سنة في مجال البرمجة وأمن المعلومات، أسعى لصنع حلول تقنية إبداعية وتطوير الأنظمة الذكية.</p>
-    </section>
+  <section id="skills">
+    <h2>Skills</h2>
+    <ul class="skills-list">
+      <li>Python</li>
+      <li>Networking</li>
+      <li>Cybersecurity</li>
+      <li>SharePoint</li>
+      <li>GRC (Governance, Risk, Compliance)</li>
+    </ul>
+  </section>
 
-    <section class="projects">
-        <h2>مشاريعي</h2>
-        <ul id="project-list">
-            <li>جارٍ تحميل المشاريع...</li>
-        </ul>
-    </section>
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="project">
+      <h3>SharePoint Access Tracker</h3>
+      <p>A tool that exports and audits SharePoint 2019 access logs with reporting.</p>
+    </div>
+    <div class="project">
+      <h3>AI-Based Risk Scoring System</h3>
+      <p>Python app that calculates compliance risks using AI rule models.</p>
+    </div>
+  </section>
 
-    <section class="gallery">
-        <h2>معرض الصور</h2>
-        <div class="gallery-images">
-            <img src="img1.jpg" alt="صورة 1">
-            <img src="img2.jpg" alt="صورة 2">
-        </div>
-    </section>
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Feel free to reach out via <a href="mailto:moatazflix1980@gmail.com">email</a> or connect on <a href="https://linkedin.com">LinkedIn</a>.</p>
+  </section>
 
-    <section class="certificates">
-        <h2>الشهادات</h2>
-        <ul>
-            <li>شهادة CEH – 2023</li>
-            <li>دورة ASP.NET Core – 2024</li>
-        </ul>
-    </section>
-
-    <section class="contact">
-        <h2>تواصل معي</h2>
-        <form action="https://formspree.io/f/your_form_id" method="POST">
-            <input type="text" name="name" placeholder="الاسم" required>
-            <input type="email" name="_replyto" placeholder="البريد الإلكتروني" required>
-            <textarea name="message" placeholder="رسالتك" required></textarea>
-            <button type="submit">إرسال</button>
-        </form>
-    </section>
-
-    <footer>
-        <p>
-            <a href="mailto:moatazflix1980@gmail.com">Email</a> |
-            <a href="https://github.com/moataz">GitHub</a> |
-            <a href="https://linkedin.com">LinkedIn</a>
-        </p>
-    </footer>
-
-    <script>
-        document.getElementById('project-list').innerHTML = `
-            <li><strong>نظام أرشفة ذكي</strong> - منصة لإدارة الوثائق وتحليل البيانات تلقائيًا.</li>
-            <li><strong>تطبيق تعليمي للأطفال</strong> - مبني باستخدام Flutter لتعليم البرمجة بشكل ممتع.</li>
-            <li><strong>موقع بورتفوليو</strong> - مبني باستخدام GitHub Pages وJekyll.</li>
-        `;
-    </script>
+  <footer>
+    <p>&copy; 2025</p>
+  </footer>
 </body>
 </html>
